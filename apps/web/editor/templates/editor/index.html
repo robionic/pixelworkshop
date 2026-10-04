@@ -51,6 +51,34 @@
                     <span id="properties-text">Lena.png | 512 x 512 px | PNG | 3 channels</span>
                 </div>
                 <p class="hint">Move across the image to inspect coordinates and RGB values.</p>
+                <section class="visualizer" aria-label="Image visualizer">
+                    <div class="visualizer-heading">
+                        <div>
+                            <p class="eyebrow">IMAGE ANALYSIS</p>
+                            <h2 id="visualizer-title">RGB histogram</h2>
+                        </div>
+                        <span id="visualizer-image-type" class="image-name">RGB image</span>
+                    </div>
+                    <div class="visualizer-layout">
+                        <div class="visualizer-graph">
+                            <canvas id="visualizer-canvas" width="768" height="360" aria-label="Selected image visualization"></canvas>
+                            <p id="visualizer-summary" class="hint" aria-live="polite"></p>
+                        </div>
+                        <nav id="visualizer-functions" class="visualizer-functions" aria-label="Visualization functions">
+                            <button type="button" data-visualization="rgb-histogram">RGB histogram</button>
+                            <button type="button" data-visualization="gray-histogram">Grey level histogram</button>
+                            <button type="button" data-visualization="scatter">RGB 3D scatter plot</button>
+                            <button type="button" data-visualization="red-16">16 bin histogram of red channel</button>
+                            <button type="button" data-visualization="green-16">16 bin histogram of green channel</button>
+                            <button type="button" data-visualization="blue-16">16 bin histogram of blue channel</button>
+                            <button type="button" data-visualization="luminance-16">16 bin histogram of luminance</button>
+                            <button type="button" data-visualization="gray-16">16 bin histogram of grey scale image</button>
+                            <button type="button" data-visualization="harris">Harris-Förstner Corners</button>
+                            <button type="button" data-visualization="sift">SIFT features</button>
+                            <button type="button" data-visualization="surf">SURF features</button>
+                        </nav>
+                    </div>
+                </section>
             </div>
 
             <aside class="controls-panel" aria-label="Image controls">

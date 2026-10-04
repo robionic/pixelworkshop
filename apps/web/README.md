@@ -11,6 +11,7 @@ The Django web app is the browser-based version of PixelWorkshop. It exposes the
 - **Local Image Upload**: Add a custom image for inspection.
 - **Selection Box**: Drag a region of interest on the page.
 - **Histogram Analysis**: View RGB, CMYK, and grayscale distributions.
+- **Image Visualizer**: Compare RGB/gray histograms, 16-bin channels, RGB scatter, and corner/keypoint overlays below the image.
 - **Zoom and Inspection Controls**: Adjust the view and inspect the selected box closely.
 
 ## 🛠️ Technology Stack
@@ -46,6 +47,7 @@ http://127.0.0.1:8000/
 3. Drag a region of interest across the image.
 4. Review the histogram for the selected box.
 5. Switch between RGB, CMYK, and grayscale analysis modes as needed.
+6. Use the visualizer below the image to select an analysis; options incompatible with the uploaded image's color type are disabled.
 
 The web app shares the same core inspection model as the desktop version, while adding a browser-friendly interface for broader accessibility.
 

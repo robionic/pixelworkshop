@@ -11,6 +11,7 @@ PixelWorkshop is a lightweight image-processing and inspection workspace that pr
 - **Selection Box**: Drag a region on the image to define the area of interest.
 - **Zoom Controls**: Inspect the image and selected area more closely.
 - **Histogram Analysis**: View histogram data for the selected region in RGB, CMYK, or grayscale modes.
+- **Web Image Visualizer**: Explore channel histograms, RGB scatter, and corner/keypoint overlays alongside the image.
 
 ### Cross-Platform Experience
 - **Desktop App**: OpenCV-based window application for fast interactive processing.
