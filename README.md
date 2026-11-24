@@ -4,10 +4,14 @@
 
 PixelWorkshop is a lightweight image-processing and inspection workspace that provides the same core image-analysis workflow in both a desktop and a browser-based app. It is designed for users who want to upload an image, isolate a region of interest, inspect brightness and color distributions, and compare analysis across desktop and web interfaces.
 
+## License and third-party materials
+
+The MIT license applies to original code and materials created for this repository. Third-party assets, data, dependencies, and model weights retain their own licenses and notices; the repository's MIT license does not relicense them.
+
 ## 🚀 Key Features
 
 ### Image Processing Workflow
-- **Image Upload**: Load a local image or use the bundled sample image.
+- **Image Upload**: Load a local image or use the generated color-gradient sample.
 - **Selection Box**: Drag a region on the image to define the area of interest.
 - **Zoom Controls**: Inspect the image and selected area more closely.
 - **Histogram Analysis**: View histogram data for the selected region in RGB, CMYK, or grayscale modes.
@@ -16,7 +20,7 @@ PixelWorkshop is a lightweight image-processing and inspection workspace that pr
 ### Cross-Platform Experience
 - **Desktop App**: OpenCV-based window application for fast interactive processing.
 - **Web App**: Django-powered browser version for easier remote or classroom usage.
-- **Shared Resources**: Both applications use the same sample image assets under `shared/images`.
+- **Shared Resources**: Both applications can use generated sample imagery or user uploads.
 
 ## 🛠️ Technology Stack
 
@@ -31,7 +35,7 @@ PixelWorkshop is a lightweight image-processing and inspection workspace that pr
 - **HTML/CSS/JavaScript**
 
 ### Shared Assets
-- **Sample images** stored in `shared/images`
+- **Generated sample image** created in code; no third-party sample image is bundled.
 
 ## 📋 Installation & Setup
 
@@ -79,7 +83,7 @@ Open:
 http://127.0.0.1:8000/
 ```
 
-The web app serves the shared sample image and supports local uploads, history-style selection, zooming, and RGB/CMYK/gray histogram inspection.
+The web app starts with a generated sample image and supports local uploads, history-style selection, zooming, and RGB/CMYK/gray histogram inspection.
 
 ## 📁 Project Structure
 

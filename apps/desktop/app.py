@@ -5,32 +5,28 @@ import tkinter as tk
 from tkinter import filedialog
 
 
-# Load an image from your computer
-imagePath = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'shared', 'images', 'Lena.png'))
-img = cv2.imread(imagePath)
+rows, columns = np.indices((512, 512))
+img = np.stack((columns // 2, rows // 2, (rows + columns) // 4), axis=2).astype(np.uint8)
 
-# Check if the image was loaded successfully
-if img is None:
-    print("Image not found. Check the path.")
-else:
-    current_image = img.copy()
-    cursor_position = None
-    current_image_name = imagePath.split('\\')[-1]
-    current_image_size = os.path.getsize(imagePath)
-    zoom_level = 1.0
-    selection_start = None
-    selection_box = None
-    histogram_mode = 'rgb'
-    histogram_zoom = 1.0
-    limit_entries = {}
-    limits = {
-        'Brightness': [0, 200],
-        'Contrast': [0, 200],
-        'Rotation': [-180, 180],
-        'Translate': [0, 100],
-        'Shear': [-100, 100],
-    }
+current_image = img.copy()
+cursor_position = None
+current_image_name = 'Generated sample'
+current_image_size = img.nbytes
+zoom_level = 1.0
+selection_start = None
+selection_box = None
+histogram_mode = 'rgb'
+histogram_zoom = 1.0
+limit_entries = {}
+limits = {
+    'Brightness': [0, 200],
+    'Contrast': [0, 200],
+    'Rotation': [-180, 180],
+    'Translate': [0, 100],
+    'Shear': [-100, 100],
+}
 
+if img is not None:
     def render_image(image):
         global current_image
 

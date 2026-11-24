@@ -7,7 +7,7 @@ The Django web app is the browser-based version of PixelWorkshop. It exposes the
 ## 🚀 Key Features
 
 - **Browser-Based Workflow**: Run the app inside a standard web browser.
-- **Shared Sample Image**: Load the bundled image from `shared/images`.
+- **Generated Sample Image**: Start with a color-gradient test image generated in the browser; upload a local image to inspect your own image.
 - **Local Image Upload**: Add a custom image for inspection.
 - **Selection Box**: Drag a region of interest on the page.
 - **Histogram Analysis**: View RGB, CMYK, and grayscale distributions.
@@ -43,7 +43,7 @@ http://127.0.0.1:8000/
 ## 🎯 Usage Guide
 
 1. Open the app in the browser.
-2. Upload or select a sample image.
+2. Inspect the generated sample or upload an image.
 3. Drag a region of interest across the image.
 4. Review the histogram for the selected box.
 5. Switch between RGB, CMYK, and grayscale analysis modes as needed.

@@ -41,7 +41,7 @@ The desktop app is the OpenCV-based version of PixelWorkshop for local image ins
 - `+` / `-`: zoom the histogram
 - `Esc`: exit
 
-Drag on the image to select the histogram region. The sample image is loaded from `shared/images` by default.
+Drag on the generated color-gradient sample to select the histogram region, or press `u` to load a local image.
 
 ## 📁 Project Structure
 

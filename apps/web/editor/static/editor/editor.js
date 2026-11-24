@@ -1,6 +1,5 @@
 (() => {
     const image = new Image();
-    image.src = '/static/Lena.png';
 
     const canvas = document.getElementById('image-canvas');
     const context = canvas.getContext('2d', { willReadFrequently: true });
@@ -852,4 +851,16 @@
     document.getElementById('close-histogram').addEventListener('click', () => histogramDialog.close());
     histogramMode.addEventListener('change', drawHistogram);
     histogramZoom.addEventListener('change', () => { histogramCanvas.style.width = `${768 * Number(histogramZoom.value)}px`; drawHistogram(); });
+
+    const sampleCanvas = document.createElement('canvas');
+    sampleCanvas.width = 512;
+    sampleCanvas.height = 512;
+    const sampleContext = sampleCanvas.getContext('2d');
+    const sampleGradient = sampleContext.createLinearGradient(0, 0, 512, 512);
+    sampleGradient.addColorStop(0, '#ee744d');
+    sampleGradient.addColorStop(0.5, '#80cfa4');
+    sampleGradient.addColorStop(1, '#8bb9e8');
+    sampleContext.fillStyle = sampleGradient;
+    sampleContext.fillRect(0, 0, sampleCanvas.width, sampleCanvas.height);
+    image.src = sampleCanvas.toDataURL('image/png');
 })();
